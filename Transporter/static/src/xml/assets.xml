@@ -1,0 +1,7 @@
+<odoo>
+    <template id="assets_backend" name="Transporter Backend Assets" inherit_id="web._assets_backend">
+        <xpath expr="." position="inside">
+       <!-- <script type="text/javascript" src="/Transporter/static/src/js/address_autocomplete.js"/> -->
+        </xpath>
+    </template>
+</odoo>

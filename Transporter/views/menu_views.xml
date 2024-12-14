@@ -1,0 +1,11 @@
+<odoo>
+    <!-- Main Fleet Menu -->
+    <menuitem id="fleet_menu" name="Fleet Management" sequence="1"/>
+
+    <!-- Submenus -->
+    <menuitem id="fleet_vehicle_menu" name="Fleet Vehicles" parent="fleet_menu" action="action_fleet_vehicle" sequence="10"/>
+    <menuitem id="fleet_trip_menu" name="Fleet Trips" parent="fleet_menu" action="action_fleet_trip" sequence="20"/>
+    <menuitem id="fleet_rig_menu" name="Fleet Rigs" parent="fleet_menu" action="action_fleet_rig" sequence="30"/>
+    <menuitem id="transport_quote_menu" name="Transport Quotes" parent="fleet_menu" action="action_transport_quote" sequence="40"/>
+    <menuitem id="fleet_depot_menu" name="Depots" parent="fleet_menu" action="action_fleet_depot"/>
+</odoo>

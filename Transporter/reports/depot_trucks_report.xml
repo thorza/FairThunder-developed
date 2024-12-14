@@ -1,0 +1,33 @@
+<odoo>
+    <template id="report_trucks_by_depot">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="depot">
+                <h2 t-esc="depot.name"/>
+                <table class="table table-sm table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Truck Name</th>
+                            <th>License Plate</th>
+                            <th>Model</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="depot.vehicles" t-as="vehicle">
+                            <td t-esc="vehicle.name"/>
+                            <td t-esc="vehicle.license_plate"/>
+                            <td t-esc="vehicle.model_id.name"/>
+                        </tr>
+                    </tbody>
+                </table>
+            </t>
+        </t>
+    </template>
+
+    <report 
+        id="report_trucks_by_depot_action"
+        model="fleet.depot"
+        string="Trucks by Depot"
+        report_type="qweb-pdf"
+        file="fleet_trucks_by_depot"
+        name="fleet_trucks_by_depot.report_trucks_by_depot"/>
+</odoo>

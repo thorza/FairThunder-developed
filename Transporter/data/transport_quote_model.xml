@@ -1,0 +1,8 @@
+<odoo>
+    <record id="transport_quote_model" model="ir.model.data">
+        <field name="name">transport.quote</field>
+        <field name="model">ir.model</field>
+        <field name="module">Transporter</field>
+        <field name="res_id" eval="1088"/> <!-- Match the ID from ir_model -->
+    </record>
+</odoo>

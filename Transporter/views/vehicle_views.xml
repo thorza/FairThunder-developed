@@ -1,0 +1,86 @@
+<odoo>
+    <record id="view_fleet_vehicle_form" model="ir.ui.view">
+        <field name="name">fleet.vehicle.form</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="arch" type="xml">
+            <form string="Fleet Vehicle">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="make"/>
+                        <field name="model"/>
+                        <field name="registration"/>
+                        <field name="vin"/>
+                        <field name="vrn"/>
+                        <field name="date_acquired"/>
+                        <field name="current_kilometer"/>
+                        <field name="purchase_price"/>
+                        <field name="residual_value"/>
+                        <field name="tare"/>
+                        <field name="gvm"/>
+                        <field name="axles"/>
+                        <field name="drive"/>
+                        <field name="fuel_type"/>
+                        <field name="co2_emissions"/>
+                        <field name="indexed_fuel_consumption"/>
+                        <field name="next_maintenance"/>
+                        <field name="next_inspection"/>
+                        <field name="next_license_renewal"/>
+                    </group>
+                    <notebook>
+                        <page string="Depreciation Schedule">
+                            <field name="depreciation_schedule_ids">
+                                <tree>
+                                    <field name="date"/>
+                                    <field name="value"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Maintenance History">
+                            <field name="maintenance_history_ids">
+                                <tree>
+                                    <field name="date"/>
+                                    <field name="description"/>
+                                    <field name="cost"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Inspection Records">
+                            <field name="inspection_ids">
+                                <tree>
+                                    <field name="date"/>
+                                    <field name="inspector"/>
+                                    <field name="remarks"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_fleet_vehicle_tree" model="ir.ui.view">
+        <field name="name">fleet.vehicle.tree</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="arch" type="xml">
+            <tree string="Fleet Vehicles">
+                <field name="name"/>
+                <field name="make"/>
+                <field name="model"/>
+                <field name="registration"/>
+                <field name="current_kilometer"/>
+                <field name="fuel_type"/>
+                <field name="next_maintenance"/>
+                <field name="next_inspection"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_fleet_vehicle" model="ir.actions.act_window">
+        <field name="name">Fleet Vehicles</field>
+        <field name="res_model">fleet.vehicle</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
+

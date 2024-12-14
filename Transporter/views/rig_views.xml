@@ -1,0 +1,41 @@
+<odoo>
+    <record id="view_fleet_rig_form" model="ir.ui.view">
+        <field name="name">fleet.rig.form</field>
+        <field name="model">fleet.rig</field>
+        <field name="arch" type="xml">
+            <form string="Fleet Rig">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="rig_number"/>
+                        <field name="truck_id"/>
+                        <field name="trailer_ids"/>
+                        <field name="gcm"/>
+                        <field name="max_payload"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_fleet_rig_tree" model="ir.ui.view">
+        <field name="name">fleet.rig.tree</field>
+        <field name="model">fleet.rig</field>
+        <field name="arch" type="xml">
+            <tree string="Fleet Rigs">
+                <field name="name"/>
+                <field name="rig_number"/>
+                <field name="truck_id"/>
+                <field name="gcm"/>
+                <field name="max_payload"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_fleet_rig" model="ir.actions.act_window">
+        <field name="name">Fleet Rigs</field>
+        <field name="res_model">fleet.rig</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

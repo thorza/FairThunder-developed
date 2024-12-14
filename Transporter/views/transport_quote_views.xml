@@ -1,0 +1,58 @@
+<odoo>
+    <record id="view_transport_quote_form" model="ir.ui.view">
+        <field name="name">transport.quote.form</field>
+        <field name="model">transport.quote</field>
+        <field name="arch" type="xml">
+            <form string="Transport Quote">
+                <header>
+                    <!-- Confirm Button for Action -->
+                    <button name="action_confirm" type="object" string="Confirm" class="btn-primary" states="draft"/>
+                    
+                    <!-- Statusbar for State -->
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed"/>
+                </header>
+                <sheet>
+                    <!-- Basic Quote Details -->
+                    <group string="Quote Information">
+                        <field name="name"/>
+                        <field name="customer_id"/>
+                        <field name="total_cost"/>
+                    </group>
+                    
+                    <!-- Pickup and Dropoff Information -->
+                    <group string="Route Details">
+                        <field name="pickup_address"/>
+                        <field name="dropoff_address"/>
+                    </group>
+                    
+                    <!-- Load Details -->
+                    <group string="Load Details">
+                        <field name="load_type_id"/>
+                        <field name="load_weight"/>
+                        <field name="load_volume"/>
+                    </group>
+                    
+                    <!-- Geolocation Information -->
+                    <group string="Geolocation">
+                        <field name="pickup_lat"/>
+                        <field name="pickup_lon"/>
+                        <field name="dropoff_lat"/>
+                        <field name="dropoff_lon"/>
+                        <field name="route_distance_km" readonly="1"/>
+                    </group>
+                    
+                    <!-- Consignor and Consignee -->
+                    <group string="Consignor/Consignee">
+                        <field name="consignor_id"/>
+                        <field name="consignee_id"/>
+                    </group>
+                    
+                    <!-- Linked Trip -->
+                    <group string="Linked Trip">
+                        <field name="trip_id" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

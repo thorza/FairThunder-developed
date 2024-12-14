@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fleet_vehicle,fleet.vehicle,model_fleet_vehicle,,1,1,1,1
+access_fleet_trip,fleet.trip,model_fleet_trip,,1,1,1,1
+access_fleet_maintenance,fleet.maintenance,model_fleet_maintenance,,1,1,1,1
+access_fleet_inspection,fleet.inspection,model_fleet_inspection,,1,1,1,1
+access_fleet_depreciation,fleet.depreciation,model_fleet_depreciation,,1,1,1,1
+access_transport_quote,transport.quote,model_transport_quote,,1,1,1,1
+access_fleet_rig,fleet.rig,model_fleet_rig,,1,1,1,1
+access_fleet_depot_user,fleet.depot.user,model_fleet_depot,,1,1,1,1

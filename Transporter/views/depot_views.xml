@@ -1,0 +1,31 @@
+<odoo>
+    <record id="view_fleet_depot_form" model="ir.ui.view">
+        <field name="name">fleet.depot.form</field>
+        <field name="model">fleet.depot</field>
+        <field name="arch" type="xml">
+            <form string="Depot">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="address_search" widget="address_autocomplete" placeholder="Search Address..." options="{'no_create': True}"/>
+                        <field name="address" readonly="1"/>
+                        <field name="city"/>
+                        <field name="state_id"/>
+                        <field name="country_id"/>
+                        <field name="latitude" readonly="1"/>
+                        <field name="longitude" readonly="1"/>
+                    </group>
+                    <group string="Vehicles">
+                        <field name="vehicles" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_fleet_depot" model="ir.actions.act_window">
+        <field name="name">Depots</field>
+        <field name="res_model">fleet.depot</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

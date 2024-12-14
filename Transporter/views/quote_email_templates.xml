@@ -1,0 +1,18 @@
+<odoo>
+    <template id="transport_quote_email_template">
+        <t t-name="transport.quote.email">
+            <div>
+                <h2>Dear <t t-esc="object.customer_id.name"/>,</h2>
+                <p>We are pleased to confirm your transport quote:</p>
+                <p><strong>Quote Name:</strong> <t t-esc="object.name"/></p>
+                <p><strong>Customer:</strong> <t t-esc="object.customer_id.name"/></p>
+                <p><strong>Pickup Address:</strong> <t t-esc="object.pickup_address"/></p>
+                <p><strong>Dropoff Address:</strong> <t t-esc="object.dropoff_address"/></p>
+                <p><strong>Load Details:</strong> Type - <t t-esc="object.load_type_id.name"/>, 
+                Weight - <t t-esc="object.load_weight"/> kg, Volume - <t t-esc="object.load_volume"/> m³</p>
+                <p><strong>Total Cost:</strong> $<t t-esc="object.total_cost"/></p>
+                <p>Thank you for choosing our transport services.</p>
+            </div>
+        </t>
+    </template>
+</odoo>
